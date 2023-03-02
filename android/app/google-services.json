@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648529207715",
+    "project_id": "chalenger-afe64",
+    "storage_bucket": "chalenger-afe64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648529207715:android:94f995c29dd2192e70fa16",
+        "android_client_info": {
+          "package_name": "com.example.chalenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648529207715-hpune18boradt0h18t3i1karur67f35v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTRIXSv9Sdy-sTarLgNc6BRlMDKt6Z_AE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648529207715-hpune18boradt0h18t3i1karur67f35v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

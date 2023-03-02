@@ -1,0 +1,65 @@
+{
+    "home": "Accueil",
+
+    "follow": "Suivre",
+
+    "following": "Suivis",
+
+    "friends": "Amis",
+
+    "story": "Story",
+
+    "notification": "Notifications",
+
+    "profile": "Profil",
+
+    "week": "De la sem...",
+
+    "events": "evène...",
+
+    "contribution": "contributions",
+
+    "challenge": "challenges",
+
+    "report": "Signaler",
+
+    "not_cool": "Pas cool",
+
+    "download": "Télécharger",
+
+    "favorite": "Favori",
+
+    "clear_mode": "Mode clair",
+
+    "share": "Partager avec",
+
+    "creator_page": "Page du créateur",
+
+    "more_friends": "Chercher plus d'amis",
+
+    "comments": "commentaires",
+
+    "add_comment": "Ajouter un commentaire...",
+
+    "research": "Rechercher",
+
+    "clean": "tout supprimer",
+
+    "picture": "Images",
+
+    "video": "Vidéos",
+
+    "invite_with_profile": "Inviter avec mon profil",
+
+    "setting": "Paramètres et confidentialité",
+
+    "choose_nickname": "+ Choisir un surnom",
+
+    "followers": "Followers",
+
+    "likes": "J'aimes",
+
+    "profile_modifier": "Modifier le profil",
+
+    "add_friends": "Ajouter des amis"
+}

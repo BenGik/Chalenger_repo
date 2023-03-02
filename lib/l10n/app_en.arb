@@ -1,0 +1,136 @@
+{
+    "home": "home",
+    "@home": {
+        "description": "The home page"
+    },
+    "follow": "Follow",
+    "@follow": {
+        "description": "The follow page"
+    },
+    "friends": "Friends",
+    "@friends": {
+        "description": "The friends page"
+    },
+    "story": "Story",
+    "@story": {
+        "description": "The story page"
+    },
+    "following": "Following",
+    "@follow": {
+        "description": "The following option"
+    },
+    "notification": "Notifications",
+    "@notification": {
+        "description": "The notification page"
+    },
+    "profile": "Profile",
+    "@profile": {
+        "description": "The profile section"
+    },
+    "week": "Of the week",
+    "@week": {
+        "description": "virals of the week"
+    },
+    "events": "events",
+    "@events": {
+        "description": "The events page"
+    },
+    "contribution": "contribution",
+    "@contribution": {
+        "description": "The contribution page"
+    },
+    "challenge": "challenges",
+    "@challenge": {
+        "description": "The challenges page"
+    },
+    "report": "Report",
+    "@report": {
+        "description": "The report option"
+    },
+    "not_cool": "Not cool",
+    "@not_cool": {
+        "description": "The not_cool option"
+    },
+    "download": "Download",
+    "@download": {
+        "description": "The download option"
+    },
+    "favorite": "Mark as favorite",
+    "@favorite": {
+        "description": "The favorite option"
+    },
+    "clear_mode": "Clear mode",
+    "@clear_mode": {
+        "description": "The clear_mode option"
+    },
+    "share": "Share with",
+    "@share": {
+        "description": "The share option"
+    },
+    "creator_page": "Creator's page",
+    "@creator_page": {
+        "description": "The creator_page option"
+    },
+    "more_friends": "Search for more friends",
+    "@more_friends": {
+        "description": "The more_friends option"
+    },
+    "comments": "comments",
+    "@comments": {
+        "description": "The comment section title"
+    },
+    "add_comment": "Add a comment...",
+    "@add_comment": {
+        "description": "The add_comment place holder"
+    },
+
+
+    "research": "Research",
+    "@research": {
+        "description": "The research box and button"
+    },
+    "clean": "clean all",
+    "@clean": {
+        "description": "The cleaning button"
+    },
+
+
+    "picture": "Pictures",
+    "@picture": {
+        "description": "The pictures gallery"
+    },
+    "video": "Videos",
+    "@video": {
+        "description": "The videos gallery"
+    },
+
+
+    "profile_modifier": "Edit profile",
+    "@profile_modifier": {
+        "description": "The profil modification section"
+    },
+    "invite_with_profile": "Invite with my profile",
+    "@invite_with_profile": {
+        "description": "The invitation with profil section"
+    },
+    "setting": "Setting and confidentiality",
+    "@setting": {
+        "description": "The setting section"
+    },
+    "choose_nickname": "+ Choose a nickname",
+    "@choose_nickname": {
+        "description": "The choose_nickname section"
+    },
+    "followers": "Followers",
+    "@followers": {
+        "description": "The followers section"
+    },
+    "likes": "Likes",
+    "@likes": {
+        "description": "The likes section"
+    },
+    "add_friends": "add friends",
+    "@add_friends": {
+        "description": "The Add_friends section"
+    }
+}
