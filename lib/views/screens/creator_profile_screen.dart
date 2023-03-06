@@ -5,7 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-final fcontroller = ScrollController();
+
+final bController = ScrollController();
 
 class CreatorProfile extends StatefulWidget {
   const CreatorProfile({super.key});
@@ -16,6 +17,13 @@ class CreatorProfile extends StatefulWidget {
 
 class _CreatorProfileState extends State<CreatorProfile>
   with TickerProviderStateMixin{
+    @override
+    void initState() {
+    super.initState();
+
+    bController.addListener(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     TabController pController = 
@@ -59,129 +67,27 @@ class _CreatorProfileState extends State<CreatorProfile>
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        controller: fcontroller,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: Dimentions.height20),
-            CircleAvatar(
-              radius: Dimentions.r50,
-              backgroundColor: Colors.grey.withOpacity(0.2),
-              backgroundImage: const AssetImage('assets/images/i_4.jpg'),
-            ),
-            SizedBox(height: Dimentions.height15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("@username",
-                  style: GoogleFonts.mulish(
-                    textStyle: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w800,
-                      fontSize: Dimentions.fsz15,
-                    ),
-                  ),
-                  maxLines: 1,
-                )
-              ],
-            ),
-            SizedBox(height: Dimentions.height15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    Text("1",
-                      style: GoogleFonts.mulish(
-                        textStyle: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w800,
-                          fontSize: Dimentions.fsz16,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: Dimentions.height5),
-                    Text(
-                      tr(context)!.following,
-                      style: GoogleFonts.mulish(
-                        textStyle: TextStyle(
-                          color: Colors.black.withOpacity(0.3),
-                          fontWeight: FontWeight.w600,
-                          fontSize: Dimentions.fsz14,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(width: Dimentions.width50),
-                Column(
-                  children: [
-                    Text("3",
-                      style: GoogleFonts.mulish(
-                        textStyle: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w800,
-                          fontSize: Dimentions.fsz16,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: Dimentions.height5),
-                    Text(
-                      tr(context)!.followers,
-                      style: GoogleFonts.mulish(
-                        textStyle: TextStyle(
-                          color: Colors.black.withOpacity(0.3),
-                          fontWeight: FontWeight.w600,
-                          fontSize: Dimentions.fsz14,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                SizedBox(width: Dimentions.width50),
-                Column(
-                  children: [
-                    Text("5",
-                      style: GoogleFonts.mulish(
-                        textStyle: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w800,
-                          fontSize: Dimentions.fsz16,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: Dimentions.height5),
-                    Text(
-                      tr(context)!.likes,
-                      style: GoogleFonts.mulish(
-                        textStyle: TextStyle(
-                          color: Colors.black.withOpacity(0.3),
-                          fontWeight: FontWeight.w600,
-                          fontSize: Dimentions.fsz14,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(height: Dimentions.height15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.amber.withOpacity(0.5),
-                    borderRadius: BorderRadius.circular(Dimentions.r5)
-                  ),
-                  padding: EdgeInsets.symmetric(
-                    vertical: Dimentions.height10,
-                    horizontal: Dimentions.width50
-                  ),
-                  child: Text(
-                    tr(context)!.follow,
+      body: NotificationListener<OverscrollIndicatorNotification>(
+        onNotification: (OverscrollIndicatorNotification overscroll) {
+          overscroll.disallowIndicator();
+          return false;
+        },
+        child: SingleChildScrollView(
+          controller: bController,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: Dimentions.r50,
+                backgroundColor: Colors.grey.withOpacity(0.2),
+                backgroundImage: const AssetImage('assets/images/i_4.jpg'),
+              ),
+              SizedBox(height: Dimentions.height15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("@username",
                     style: GoogleFonts.mulish(
                       textStyle: TextStyle(
                         color: Colors.black,
@@ -189,73 +95,180 @@ class _CreatorProfileState extends State<CreatorProfile>
                         fontSize: Dimentions.fsz15,
                       ),
                     ),
-                  ),
-                ),
-                SizedBox(width: Dimentions.width5),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(Dimentions.r5)
-                  ),
-                  padding: EdgeInsets.symmetric(
-                    vertical: Dimentions.height10,
-                    horizontal: Dimentions.width15
-                  ),
-                  child: FaIcon(
-                    FontAwesomeIcons.angleDown,
-                    color: Colors.black, 
-                    size: Dimentions.size20,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: Dimentions.height15),
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: Dimentions.height10
-              ),
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.grey.withOpacity(0.5)
-                  )
-                )
-              ),
-              height: Dimentions.height35,
-              width: double.infinity,
-              child: TabBar(
-                controller: pController,
-                indicatorSize: TabBarIndicatorSize.label,
-                indicatorWeight: 2,
-                indicatorColor: Colors.black,
-                labelColor: Colors.black,
-                unselectedLabelColor: Colors.blueGrey,
-                tabs: [
-                  Tab(icon: FaIcon(
-                      FontAwesomeIcons.chartColumn,
-                      size: Dimentions.size20,
-                    ),
-                  ),
-                  Tab(icon: FaIcon(
-                      FontAwesomeIcons.heart,
-                      size: Dimentions.size20,
-                    ),
+                    maxLines: 1,
                   )
                 ],
               ),
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: Dimentions.height800,
-              child: TabBarView(
-                controller: pController,
-                children: const [
-                  CreatorPublictionsView(),
-                  CreatorLikesView()
+              SizedBox(height: Dimentions.height15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Text("1",
+                        style: GoogleFonts.mulish(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w800,
+                            fontSize: Dimentions.fsz16,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: Dimentions.height5),
+                      Text(
+                        tr(context)!.following,
+                        style: GoogleFonts.mulish(
+                          textStyle: TextStyle(
+                            color: Colors.black.withOpacity(0.3),
+                            fontWeight: FontWeight.w600,
+                            fontSize: Dimentions.fsz14,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(width: Dimentions.width50),
+                  Column(
+                    children: [
+                      Text("3",
+                        style: GoogleFonts.mulish(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w800,
+                            fontSize: Dimentions.fsz16,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: Dimentions.height5),
+                      Text(
+                        tr(context)!.followers,
+                        style: GoogleFonts.mulish(
+                          textStyle: TextStyle(
+                            color: Colors.black.withOpacity(0.3),
+                            fontWeight: FontWeight.w600,
+                            fontSize: Dimentions.fsz14,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(width: Dimentions.width50),
+                  Column(
+                    children: [
+                      Text("5",
+                        style: GoogleFonts.mulish(
+                          textStyle: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w800,
+                            fontSize: Dimentions.fsz16,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: Dimentions.height5),
+                      Text(
+                        tr(context)!.likes,
+                        style: GoogleFonts.mulish(
+                          textStyle: TextStyle(
+                            color: Colors.black.withOpacity(0.3),
+                            fontWeight: FontWeight.w600,
+                            fontSize: Dimentions.fsz14,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ],
               ),
-            )
-          ],
+              SizedBox(height: Dimentions.height15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.amber.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(Dimentions.r5)
+                    ),
+                    padding: EdgeInsets.symmetric(
+                      vertical: Dimentions.height10,
+                      horizontal: Dimentions.width50
+                    ),
+                    child: Text(
+                      tr(context)!.follow,
+                      style: GoogleFonts.mulish(
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w800,
+                          fontSize: Dimentions.fsz15,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: Dimentions.width5),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(Dimentions.r5)
+                    ),
+                    padding: EdgeInsets.symmetric(
+                      vertical: Dimentions.height10,
+                      horizontal: Dimentions.width15
+                    ),
+                    child: FaIcon(
+                      FontAwesomeIcons.angleDown,
+                      color: Colors.black, 
+                      size: Dimentions.size20,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: Dimentions.height15),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: Dimentions.height10
+                ),
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Colors.grey.withOpacity(0.5)
+                    )
+                  )
+                ),
+                height: Dimentions.height35,
+                width: double.infinity,
+                child: TabBar(
+                  controller: pController,
+                  indicatorSize: TabBarIndicatorSize.label,
+                  indicatorWeight: 2,
+                  indicatorColor: Colors.black,
+                  labelColor: Colors.black,
+                  unselectedLabelColor: Colors.blueGrey,
+                  tabs: [
+                    Tab(icon: FaIcon(
+                        FontAwesomeIcons.chartColumn,
+                        size: Dimentions.size20,
+                      ),
+                    ),
+                    Tab(icon: FaIcon(
+                        FontAwesomeIcons.heart,
+                        size: Dimentions.size20,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: Dimentions.height800,
+                child: TabBarView(
+                  controller: pController,
+                  children: const [
+                    CreatorPublictionsView(),
+                    CreatorLikesView()
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -278,7 +291,7 @@ class _CreatorPublictionsViewState extends State<CreatorPublictionsView> {
       body: GridView.builder(
         controller: scontroller,
         itemCount: 20,
-        physics: const NeverScrollableScrollPhysics(),
+        physics: bController.position.pixels == MediaQuery.of(context).size.height? const NeverScrollableScrollPhysics(): const ScrollPhysics(parent: null),
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,

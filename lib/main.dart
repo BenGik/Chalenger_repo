@@ -43,7 +43,8 @@ class App extends StatelessWidget {
         textTheme: GoogleFonts.kanitTextTheme(
           Theme.of(context).textTheme,
       )),
-      home: const SplashScreen(),
+      home: const SplashScreen()
     );
   }
 }
+

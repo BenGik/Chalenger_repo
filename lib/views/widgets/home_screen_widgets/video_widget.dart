@@ -124,7 +124,7 @@ class _VideoWidgetState extends State<VideoWidget> {
               right: 0,
               left: Dimentions.width10,
               child: Visibility(
-                visible: mainVideoPlayerController.value.isPlaying || mainVideoPlayerController.value.duration.inSeconds < 20 ? false : true,
+                visible: mainVideoPlayerController.value.isPlaying || mainVideoPlayerController.value.duration.inSeconds <= 20 ? false : true,
                 child: Row(
                   children: [
                     Text(
@@ -166,7 +166,7 @@ class _VideoWidgetState extends State<VideoWidget> {
               right: Dimentions.width10,
               left: Dimentions.width10,
               child: Visibility(
-                visible: mainVideoPlayerController.value.duration.inSeconds < 20 ? false : true,
+                visible: mainVideoPlayerController.value.duration.inSeconds <= 20 ? false : true,
                 child: Transform.scale(
                   scaleY:mainVideoPlayerController.value.isPlaying? 0.3 : 0.7,
                   child: VideoProgressIndicator(
