@@ -92,7 +92,7 @@ class _WrittingCommentBottomSheetState extends State<WrittingCommentBottomSheet>
                                     contentPadding: EdgeInsets.symmetric(
                                       horizontal: Dimentions.width10
                                     ),
-                                    border: const OutlineInputBorder(
+                                    border: OutlineInputBorder(
                                     borderSide: BorderSide.none
                                     ),
                                   ),

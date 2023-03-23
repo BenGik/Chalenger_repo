@@ -13,7 +13,7 @@ class _FollowingScreenState extends State<FollowingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
       body: Stack(
         children: 
           [

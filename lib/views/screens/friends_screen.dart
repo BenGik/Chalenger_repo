@@ -14,7 +14,7 @@ class _FriendsScreenState extends State<FriendsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
+        systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Color(0xFF010212),
           statusBarIconBrightness: Brightness.light,
           systemNavigationBarColor: Color(0xFF010212),
@@ -23,7 +23,7 @@ class _FriendsScreenState extends State<FriendsScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
     );
   }
 }

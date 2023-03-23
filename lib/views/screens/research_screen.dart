@@ -1,9 +1,10 @@
+import 'package:chalenger/controllers/video_controllers.dart';
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/utils/translation.dart';
-import 'package:chalenger/views/widgets/home_screen_widgets/video_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -17,6 +18,7 @@ class ResearchScreen extends StatefulWidget {
 class _ResearchScreenState extends State<ResearchScreen> {
   @override
   Widget build(BuildContext context) {
+    MainVideoController controller = Get.find();
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -30,19 +32,23 @@ class _ResearchScreenState extends State<ResearchScreen> {
         leading: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pop();
-                mainVideoPlayerController.play();
-                setState(() {
-                  mainVideoPlayerController.value.isPlaying;
-                });
-              },
-              child: FaIcon(
-                FontAwesomeIcons.arrowLeft,
-                color: Colors.black,
-                size: Dimentions.size22
-              ),
+            GetBuilder<MainVideoController>(
+              builder: (_) {
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    controller.mainVideoPlayerController.play();
+                    setState(() {
+                      controller.mainVideoPlayerController.value.isPlaying;
+                    });
+                  },
+                  child: FaIcon(
+                    FontAwesomeIcons.arrowLeft,
+                    color: Colors.black,
+                    size: Dimentions.size22
+                  ),
+                );
+              }
             ),
           ]
         ),
@@ -79,7 +85,7 @@ class _ResearchScreenState extends State<ResearchScreen> {
                           contentPadding: EdgeInsets.symmetric(
                             horizontal: Dimentions.width10
                           ),
-                          border: const OutlineInputBorder(
+                          border: OutlineInputBorder(
                           borderSide: BorderSide.none
                           ),
                         ),
@@ -100,7 +106,7 @@ class _ResearchScreenState extends State<ResearchScreen> {
         elevation: 0,
         backgroundColor: Colors.white
       ),
-      backgroundColor: const Color(0xFFffffff),
+      backgroundColor: Color(0xFFffffff),
       body: SingleChildScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: Column(

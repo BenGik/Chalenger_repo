@@ -5,6 +5,7 @@ class Dimentions{
   static double screenHeight = Get.context!.height;
   static double screenWidth = Get.context!.width;
 
+
   // Context Heights
   static double height2 = screenHeight/462.65;
   static double height5 = screenHeight/185.06;
@@ -34,7 +35,6 @@ class Dimentions{
   static double width310 = screenWidth/1.37;
 
 
-
   // Context FontSizes
   static double fsz10 = screenWidth/42.35;
   static double fsz12 = screenWidth/35.29;
@@ -52,7 +52,7 @@ class Dimentions{
   static double r50 = screenHeight/18.51;
 
 
-// Context IconSizes
+  // Context IconSizes
   static double size12 = screenWidth/35.29;
   static double size14 = screenWidth/30.25;
   static double size15 = screenWidth/28.24;

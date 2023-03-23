@@ -23,7 +23,7 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
         maxChildSize: 0.5,
         builder: (_, contoller) => Container(
           decoration: BoxDecoration(
-            color: const Color(0xFFECF6F2),
+            color: Color(0xFFECF6F2),
             borderRadius: BorderRadius.vertical(
             top: Radius.circular(Dimentions.r20)
             )
@@ -46,10 +46,10 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                       children: [
                         Container(
                           width: Dimentions.width50,
-                          height: Dimentions.height50,
+                          height: Dimentions.width50,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(Dimentions.r25)
+                            borderRadius: BorderRadius.circular(Dimentions.width50/2)
                           ),
                           child: Center(
                             child: FaIcon(
@@ -79,10 +79,10 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                       children: [
                         Container(
                           width: Dimentions.width50,
-                          height: Dimentions.height50,
+                          height: Dimentions.width50,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(Dimentions.r25)
+                            borderRadius: BorderRadius.circular(Dimentions.width50/2)
                           ),
                           child: Center(
                             child: FaIcon(
@@ -112,10 +112,10 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                       children: [
                         Container(
                           width: Dimentions.width50,
-                          height: Dimentions.height50,
+                          height: Dimentions.width50,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(Dimentions.r25)
+                            borderRadius: BorderRadius.circular(Dimentions.width50/2)
                           ),
                           child: Center(
                             child: FaIcon(
@@ -145,10 +145,10 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                       children: [
                         Container(
                           width: Dimentions.width50,
-                          height: Dimentions.height50,
+                          height: Dimentions.width50,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(Dimentions.r25)
+                            borderRadius: BorderRadius.circular(Dimentions.width50/2)
                           ),
                           child: Center(
                             child: FaIcon(
@@ -174,29 +174,33 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                     SizedBox(width: Dimentions.width20),
                     Column(
                       children: [
-                        Switch.adaptive(
-                          value: clearMode,
-                          onChanged: (onChanged) => setState(() {
-                            clearMode = onChanged;
-                          }),
-                          thumbIcon: MaterialStateProperty.resolveWith<Icon?>((Set<MaterialState> states) {
-                            if (states.contains(MaterialState.selected)) {
+                        SizedBox(
+                          width: Dimentions.width50,
+                          height: Dimentions.width50,
+                          child: Switch.adaptive(
+                            value: clearMode,
+                            onChanged: (onChanged) => setState(() {
+                              clearMode = onChanged;
+                            }),
+                            thumbIcon: MaterialStateProperty.resolveWith<Icon?>((Set<MaterialState> states) {
+                              if (states.contains(MaterialState.selected)) {
+                                return Icon(
+                                  FontAwesomeIcons.solidSun,
+                                  color: Colors.black,
+                                  size: Dimentions.size16,
+                                );
+                              }
                               return Icon(
-                                FontAwesomeIcons.solidSun,
+                                FontAwesomeIcons.solidMoon,
                                 color: Colors.black,
                                 size: Dimentions.size16,
-                              );
-                            }
-                            return Icon(
-                              FontAwesomeIcons.solidMoon,
-                              color: Colors.black,
-                              size: Dimentions.size16,
-                            ); 
-                          }),
-                          activeColor: Colors.amber[300],
-                          inactiveThumbColor: Colors.grey.withOpacity(0.8),
-                          activeTrackColor: Colors.amber[200],
-                          inactiveTrackColor: Colors.grey.withOpacity(0.6),
+                              ); 
+                            }),
+                            activeColor: Colors.amber[300],
+                            inactiveThumbColor: Colors.grey.withOpacity(0.8),
+                            activeTrackColor: Colors.amber[200],
+                            inactiveTrackColor: Colors.grey.withOpacity(0.6),
+                          ),
                         ),
                         SizedBox(height: Dimentions.height10),
                         Text(
@@ -211,45 +215,6 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                         )
                       ],
                     ),
-                    // Column(
-                    //   mainAxisAlignment: MainAxisAlignment.center,
-                    //   crossAxisAlignment: CrossAxisAlignment.center,
-                    //   children: [
-                    //     GestureDetector(
-                    //       onTap: () {
-                    //         setState(() {
-                    //           clearMode = !clearMode;
-                    //         });
-                    //       },
-                    //       child: Container(
-                    //         width: Dimentions.width50,
-                    //         height: Dimentions.height50,
-                    //         decoration: BoxDecoration(
-                    //           color: Colors.white,
-                    //           borderRadius: BorderRadius.circular(Dimentions.r25)
-                    //         ),
-                    //         child: Center(
-                    //           child: FaIcon(
-                    //             FontAwesomeIcons.solidMoon,
-                    //             color: Colors.blueGrey,
-                    //             size: Dimentions.size24
-                    //           ),
-                    //         )
-                    //       ),
-                    //     ),
-                    //     SizedBox(height: Dimentions.height10),
-                    //     Text(
-                    //       tr(context)!.clear_mode,
-                    //       style: GoogleFonts.mulish(
-                    //         textStyle: TextStyle(
-                    //           color: Colors.blueGrey,
-                    //           fontWeight: FontWeight.w500,
-                    //           fontSize: Dimentions.fsz12,
-                    //         )
-                    //       )
-                    //     )
-                    //   ],
-                    // ),
                   ],
                 ),
                 SizedBox(height: Dimentions.height10),
@@ -279,10 +244,10 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                           children: [
                             Container(
                               width: Dimentions.width40,
-                              height: Dimentions.height40,
+                              height: Dimentions.width40,
                               decoration: BoxDecoration(
                                 color: Colors.green,
-                                borderRadius: BorderRadius.circular(Dimentions.r20)
+                                borderRadius: BorderRadius.circular(Dimentions.width40/2)
                               ),
                               child: Center(
                                 child: FaIcon(
@@ -295,10 +260,10 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                             SizedBox(width: Dimentions.width10),
                             Container(
                               width: Dimentions.width40,
-                              height: Dimentions.height40,
+                              height: Dimentions.width40,
                               decoration: BoxDecoration(
                                 color: Colors.lightBlue,
-                                borderRadius: BorderRadius.circular(Dimentions.r20)
+                                borderRadius: BorderRadius.circular(Dimentions.width40/2)
                               ),
                               child: Center(
                                 child: FaIcon(
@@ -311,10 +276,10 @@ class _ActionsBottomSheetState extends State<ActionsBottomSheet> {
                             SizedBox(width: Dimentions.width10),
                             Container(
                               width: Dimentions.width40,
-                              height: Dimentions.height40,
+                              height: Dimentions.width40,
                               decoration: BoxDecoration(
                                 color: Colors.lightBlueAccent,
-                                borderRadius: BorderRadius.circular(Dimentions.r20)
+                                borderRadius: BorderRadius.circular(Dimentions.width40/2)
                               ),
                               child: Center(
                                 child: FaIcon(

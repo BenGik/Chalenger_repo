@@ -1,9 +1,11 @@
 import 'package:camera/camera.dart';
+import 'package:chalenger/controllers/video_controllers.dart';
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/utils/translation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:video_player/video_player.dart';
 
@@ -20,18 +22,14 @@ class VideoPreview extends StatefulWidget {
 }
 
 class _VideoPreviewState extends State<VideoPreview> {
-  late VideoPlayerController _controller;
-
+  VideoPreviewController controller = Get.find();
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/videos/v_1.mp4')
-      ..initialize().then((_) {
+      controller.videoPreviewController.initialize().then((_) {
         setState(() {
-          _controller.play();
+          controller.videoPreviewController.play();
         });
-
-        _controller.setLooping(true);
       });
   }
   @override
@@ -39,9 +37,9 @@ class _VideoPreviewState extends State<VideoPreview> {
     final MediaQueryData mediaQueryData = MediaQuery.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
       appBar: AppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
+        systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Color(0xFF010212),
           statusBarIconBrightness: Brightness.light,
           systemNavigationBarColor: Color(0xFF010212),
@@ -61,10 +59,10 @@ class _VideoPreviewState extends State<VideoPreview> {
               left: 0,
               bottom: 70,
               child: Center(
-                child: _controller.value.isInitialized
+                child: controller.videoPreviewController.value.isInitialized
                   ? AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: VideoPlayer(_controller),
+                      aspectRatio: controller.videoPreviewController.value.aspectRatio,
+                      child: VideoPlayer(controller.videoPreviewController),
                     )
                   : Container(),
               ),
@@ -77,15 +75,15 @@ class _VideoPreviewState extends State<VideoPreview> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    _controller.value.isPlaying
-                    ? _controller.pause()
-                    : _controller.play();
+                    controller.videoPreviewController.value.isPlaying
+                    ? controller.videoPreviewController.pause()
+                    : controller.videoPreviewController.play();
                   });
                 },
                 child: Container(
                   color: Colors.transparent,
                   child: Center(
-                    child: _controller.value.isPlaying ? const SizedBox(width: 0)
+                    child: controller.videoPreviewController.value.isPlaying ? const SizedBox(width: 0)
                     : FaIcon(
                       FontAwesomeIcons.play,
                       color: Colors.white.withOpacity(0.8),
@@ -173,7 +171,7 @@ class _VideoPreviewState extends State<VideoPreview> {
                                       contentPadding: EdgeInsets.symmetric(
                                         horizontal: Dimentions.width10
                                       ),
-                                      border: const OutlineInputBorder(
+                                      border: OutlineInputBorder(
                                       borderSide: BorderSide.none
                                       ),
                                     ),
@@ -185,7 +183,7 @@ class _VideoPreviewState extends State<VideoPreview> {
                         ),
                         CircleAvatar(
                           radius: Dimentions.r20/5*6,
-                          backgroundColor: const Color(0xFF1ECFC3),
+                          backgroundColor: Color(0xFF1ECFC3),
                           child: FaIcon(
                             FontAwesomeIcons.check,
                             color: Colors.white,

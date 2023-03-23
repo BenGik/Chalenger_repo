@@ -50,10 +50,21 @@ dependencies:
   shared_preferences: ^2.0.17
   camera: ^0.10.3
   rive: ^0.10.2
+  like_button: ^2.0.5
+  flutter_keyboard_visibility: ^5.4.0
+  dotted_border: ^2.0.0+3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.2.19
+  flutter_lints: ^2.0.1
+
+flutter_native_splash:
+  color: "#010212"
+  image: assets/icons/ic_2.png
+  android: true
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

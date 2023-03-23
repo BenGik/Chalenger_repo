@@ -47,11 +47,11 @@ with SingleTickerProviderStateMixin {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(Dimentions.width20),
           border: Border.all(color: Colors.white54),
-          color: const Color(0xFF010212)
+          color: Color(0xFF010212)
         ),
-        child: const CircleAvatar(
+        child: CircleAvatar(
           backgroundColor: Color(0xFF010212),
-          backgroundImage: AssetImage('assets/icons/ic_2.png'),
+          backgroundImage: const AssetImage('assets/icons/ic_2.png'),
         ),
       ),
     );

@@ -44,16 +44,15 @@ class _VideoScreenState extends State<VideoScreen> {
         // },
         controller: _pageController,
         scrollBehavior: const ScrollBehavior(),
-        allowImplicitScrolling: false,
         scrollDirection: Axis.vertical,
-        children: item.map((item){
-          return Stack(
-            children: [
-              VideoWidget(video: item["video"]),
+        children: [
+          Stack(
+            children: const [
+              VideoWidget(),
               // Center(child: Text("index: $_selectedIndex", style: const TextStyle(color: Colors.red),))
             ]
-          );
-        }).toList(),
+          )
+        ]
       ),
     );
   }

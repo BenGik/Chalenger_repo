@@ -3,7 +3,7 @@ import 'package:chalenger/views/screens/add_content_screen.dart';
 import 'package:chalenger/views/screens/friends_screen.dart';
 import 'package:chalenger/views/screens/main_challenge_scroll_page.dart';
 import 'package:chalenger/views/screens/notifications_screen.dart';
-import 'package:chalenger/views/screens/profile_managing_screen.dart';
+import 'package:chalenger/views/screens/user_profile_screen.dart';
 import 'package:chalenger/utils/translation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const FriendsScreen(),
     const AddContentSreen(),
     const NotificationsScreen(),
-    const ProfileManagingScreen()
+    const UserProfileScreen()
   ];
 
   void _onItemTapped(int index) {
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
       extendBody: true,
       body: tabs[_selectedIndex],
       bottomNavigationBar: Visibility(
@@ -45,8 +45,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: const RiveAnimation.asset(
-                "assets/riv_icons/homeicon.riv",
+              icon: const SizedBox(
+                width: 25,
+                height: 25,
+                child: RiveAnimation.asset(
+                  "assets/riv_icons/homeicon.riv",
+                ),
               ),
               activeIcon: const FaIcon(FontAwesomeIcons.house),
               label: tr(context)!.home,
@@ -58,8 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               icon: SizedBox(
-                width: 32,
-                height: 32,
+                height: Dimentions.height2*16,
                 child: RiveAnimation.asset(
                   _selectedIndex<=2 ? "assets/riv_icons/addbuttonlight.riv"
                   : "assets/riv_icons/addbuttondark.riv",
@@ -80,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
           currentIndex: _selectedIndex,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: _selectedIndex <=2? const Color(0xFF010212) : Colors.white,
+          backgroundColor: _selectedIndex <=2? Color(0xFF010212) : Colors.white,
           elevation: 0,
           selectedItemColor: _selectedIndex<=2 ? Colors.white : Colors.black,
           unselectedItemColor: Colors.grey,

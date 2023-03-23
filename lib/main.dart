@@ -1,6 +1,7 @@
 import 'package:camera/camera.dart';
-import 'package:chalenger/splash_screen.dart';
+import 'package:chalenger/utils/init_dependencies.dart';
 import 'package:chalenger/views/screens/add_content_screen.dart';
+import 'package:chalenger/views/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,6 +28,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      initialBinding: InitDep(),
       title: 'Flutter chalenger',
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -42,8 +44,14 @@ class App extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.kanitTextTheme(
           Theme.of(context).textTheme,
-      )),
-      home: const SplashScreen()
+        ),
+        primaryColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        dividerColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent
+      ),
+      home: const HomeScreen()
     );
   }
 }

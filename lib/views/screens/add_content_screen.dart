@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:camera/camera.dart';
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/utils/routes.dart';
@@ -10,6 +9,7 @@ import 'package:chalenger/views/widgets/add_contents_screen_widgets/video_previe
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 
 late List<CameraDescription> cameras;
@@ -47,9 +47,9 @@ class _AddContentSreenState extends State<AddContentSreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
       appBar: AppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
+        systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Color(0xFF010212),
           statusBarIconBrightness: Brightness.light,
           systemNavigationBarColor: Color(0xFF010212),
@@ -94,7 +94,7 @@ class _AddContentSreenState extends State<AddContentSreen> {
             ),
           ),
           Positioned(
-            top: Dimentions.height25 + Dimentions.height15*2,
+            top: Dimentions.height50 + Dimentions.height5,
             right: Dimentions.width10,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -158,7 +158,7 @@ class _AddContentSreenState extends State<AddContentSreen> {
                   onLongPressUp: () async {
                     XFile videoPath = await _cameracontroller.stopVideoRecording();
                     setState(() => isRecordingVideo = false);
-                    Navigator.of(context).push(PageRoutes2(child: VideoPreview(videoPath: videoPath)));
+                    Get.to(VideoPreview(videoPath: videoPath));
                   },
                   child: isRecordingVideo ? FaIcon(
                     FontAwesomeIcons.circleDot,

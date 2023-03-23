@@ -35,33 +35,38 @@ class _CommentBottomSheetState extends State<CommentBottomSheet> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: Dimentions.width10),
+                  padding: EdgeInsets.symmetric(horizontal: Dimentions.width15),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "1200",
-                        style: GoogleFonts.mulish(
-                          textStyle: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w800,
-                            fontSize: Dimentions.fsz14,
-                          )
-                        )
+                      const SizedBox(width: 1),
+                      Row(
+                        children: [
+                          Text(
+                            "1200",
+                            style: GoogleFonts.mulish(
+                              textStyle: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w800,
+                                fontSize: Dimentions.fsz14,
+                              )
+                            )
+                          ),
+                          SizedBox(width: Dimentions.width5),
+                          Text(
+                            tr(context)!.comments,
+                            style: GoogleFonts.mulish(
+                              textStyle: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w800,
+                                fontSize: Dimentions.fsz14,
+                              )
+                            )
+                          ),
+                        ],
                       ),
-                      SizedBox(width: Dimentions.width5),
-                      Text(
-                        tr(context)!.comments,
-                        style: GoogleFonts.mulish(
-                          textStyle: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w800,
-                            fontSize: Dimentions.fsz14,
-                          )
-                        )
-                      ),
-                      SizedBox(width: Dimentions.width50*2 + Dimentions.width10),
+                      // SizedBox(width: Dimentions.width50*2 + Dimentions.width10),
                       GestureDetector(
                         onTap: () => Navigator.of(context).pop(),
                         child: FaIcon(
@@ -75,7 +80,7 @@ class _CommentBottomSheetState extends State<CommentBottomSheet> {
                 ),
                 SizedBox(height: Dimentions.height10),
                 Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
                         color: Colors.black45,

@@ -1,12 +1,16 @@
 import 'package:chalenger/utils/dimentions.dart';
+import 'package:chalenger/utils/routes.dart';
 import 'package:chalenger/utils/translation.dart';
+import 'package:chalenger/views/screens/creator_profile_screen.dart';
 import 'package:chalenger/views/widgets/home_screen_widgets/logo_animate.dart';
 import 'package:chalenger/views/widgets/home_screen_widgets/writting_comments_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:like_button/like_button.dart';
 
 
+bool autoScroll = false;
 
 class VideoActions extends StatefulWidget {
   const VideoActions({super.key});
@@ -29,17 +33,103 @@ class _VideoActionsState extends State<VideoActions> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "@username",
-                  style: GoogleFonts.mulish(
-                    textStyle: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w800,
-                      fontSize: Dimentions.fsz16
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(bottom: Dimentions.height10/3*2),
+                      child: GestureDetector(
+                        onTap: () => Navigator.push(context, PageRoutes2(child: const CreatorProfileScreen())),
+                        child: Container(
+                          padding: const EdgeInsets.all(1.5),
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle
+                          ),
+                          child: CircleAvatar(
+                            radius: Dimentions.r20*1.1,
+                            backgroundColor: Colors.grey.withOpacity(0.2),
+                            backgroundImage: const AssetImage('assets/images/i_3.jpg'),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
+                    SizedBox(width: Dimentions.width10),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        top: Dimentions.height2
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                height: Dimentions.width20,
+                                width: Dimentions.width20,
+                                decoration: BoxDecoration(
+                                  color: Colors.amber[400],
+                                  borderRadius: BorderRadius.circular(Dimentions.width10),
+                                ),
+                                child: Center(
+                                  child: FaIcon(
+                                    FontAwesomeIcons.plus,
+                                    color: Colors.white,
+                                    size: Dimentions.size15,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: Dimentions.width5),
+                              Text(
+                                "@username",
+                                style: GoogleFonts.mulish(
+                                  textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: Dimentions.fsz16
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: Dimentions.height5),
+                          Row(
+                            children: [
+                              FaIcon(
+                                FontAwesomeIcons.eye,
+                                color: Colors.white,
+                                size: Dimentions.size14,
+                              ),
+                              SizedBox(width: Dimentions.width5),
+                              Text(
+                                "12k",
+                                style: GoogleFonts.mulish(
+                                  textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: Dimentions.fsz14
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: Dimentions.width10),
+                              Text(
+                                "il y a 2 jours",
+                                style: GoogleFonts.mulish(
+                                  textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: Dimentions.fsz14
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(height: Dimentions.height10),
+                SizedBox(height: Dimentions.height2),
                 Text(
                   "is simply dummy text of the printing and typesetting industry. Lorem ",
                   style: GoogleFonts.mulish(
@@ -78,41 +168,44 @@ class _VideoActionsState extends State<VideoActions> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Stack(
-                  alignment: AlignmentDirectional.bottomCenter,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: Dimentions.height10/3*2),
-                      child: Container(
-                        padding: const EdgeInsets.all(1.5),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle
-                        ),
-                        child: CircleAvatar(
-                          radius: Dimentions.r25,
-                          backgroundColor: Colors.grey.withOpacity(0.2),
-                          backgroundImage: const AssetImage('assets/images/i_3.jpg'),
-                        ),
-                      ),
-                    ),
-                    Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: Dimentions.width10/3*2,
-                          vertical: Dimentions.height5/2
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.amber[400],
-                          borderRadius: BorderRadius.circular(Dimentions.r20),
-                        ),
-                        child: FaIcon(
-                          FontAwesomeIcons.plus,
-                          color: Colors.white,
-                          size: Dimentions.size12,
-                        ),
-                    )
-                  ],
-                ),
+                // Stack(
+                //   alignment: AlignmentDirectional.bottomCenter,
+                //   children: [
+                //     Container(
+                //       margin: EdgeInsets.only(bottom: Dimentions.height10/3*2),
+                //       child: GestureDetector(
+                //         onTap: () => Navigator.push(context, PageRoutes2(child: const CreatorProfileScreen())),
+                //         child: Container(
+                //           padding: const EdgeInsets.all(1.5),
+                //           decoration: const BoxDecoration(
+                //             color: Colors.white,
+                //             shape: BoxShape.circle
+                //           ),
+                //           child: CircleAvatar(
+                //             radius: Dimentions.r25,
+                //             backgroundColor: Colors.grey.withOpacity(0.2),
+                //             backgroundImage: const AssetImage('assets/images/i_3.jpg'),
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //     Container(
+                //         padding: EdgeInsets.symmetric(
+                //           horizontal: Dimentions.width10/3*2,
+                //           vertical: Dimentions.height5/2
+                //         ),
+                //         decoration: BoxDecoration(
+                //           color: Colors.amber[400],
+                //           borderRadius: BorderRadius.circular(Dimentions.r20),
+                //         ),
+                //         child: FaIcon(
+                //           FontAwesomeIcons.plus,
+                //           color: Colors.white,
+                //           size: Dimentions.size12,
+                //         ),
+                //     )
+                //   ],
+                // ),
                 SizedBox(height: Dimentions.height20),
                 Container(
                   padding: EdgeInsets.only(
@@ -142,10 +235,30 @@ class _VideoActionsState extends State<VideoActions> {
                   child: Column(
                     children: [
                       GestureDetector(
-                        child: FaIcon(
-                          FontAwesomeIcons.solidHeart,
-                          color: Colors.white.withOpacity(0.9),
-                          size: Dimentions.size30
+                        child: LikeButton(
+                          likeBuilder:(isLiked) {
+                            if (isLiked == true) {
+                              return FaIcon(
+                                FontAwesomeIcons.solidHeart,
+                                color: Color(0xFFAD1457),
+                                size: Dimentions.size30
+                              );
+                            } else{
+                              return FaIcon(
+                                FontAwesomeIcons.solidHeart,
+                                color: Colors.white,
+                                size: Dimentions.size30
+                              );
+                            }
+                          },
+                          circleColor: CircleColor(start: Colors.white.withOpacity(0.9), end:  Color(0xFFAD1457)),
+                          bubblesColor: BubblesColor(
+                            dotPrimaryColor: Color(0xFFAD1457),
+                            dotSecondaryColor: Color(0xFFAD1457),
+                            dotThirdColor: Color(0xFFAD1457),
+                            dotLastColor: Color(0xFFAD1457)
+                          ),
+                          // size: Dimentions.size20*2
                         )
                       ),
                       SizedBox(height: Dimentions.height5),
@@ -223,6 +336,31 @@ class _VideoActionsState extends State<VideoActions> {
                     ],
                   ),
                 ),
+                Switch.adaptive(
+                  value: autoScroll,
+                  onChanged: (onChanged) => setState(() {
+                    autoScroll = onChanged;
+                  }),
+                  thumbIcon: MaterialStateProperty.resolveWith<Icon?>((Set<MaterialState> states) {
+                    if (states.contains(MaterialState.selected)) {
+                      return Icon(
+                        FontAwesomeIcons.circleChevronUp,
+                        color: Colors.black,
+                        size: Dimentions.size16,
+                      );
+                    }
+                    return Icon(
+                      FontAwesomeIcons.circleChevronUp,
+                      color: Colors.black,
+                      size: Dimentions.size16,
+                    ); 
+                  }),
+                  activeColor: Colors.amber[300],
+                  inactiveThumbColor: Colors.white.withOpacity(0.8),
+                  activeTrackColor: Colors.amber[200],
+                  inactiveTrackColor: Colors.white.withOpacity(0.6),
+                ),
+                SizedBox(height: Dimentions.height10),
                 const LogoAnimate()
               ],
             )
@@ -296,7 +434,7 @@ class _VideoActionsState extends State<VideoActions> {
               ),
               SizedBox(height: Dimentions.height10),
               Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   border: Border(
                     bottom: BorderSide(
                       color: Colors.black45,
@@ -480,12 +618,12 @@ class _VideoActionsState extends State<VideoActions> {
                                     child: Text(
                                       tr(context)!.add_comment,
                                       style: GoogleFonts.mulish(
-                                      textStyle: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: Dimentions.fsz15,
+                                        textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: Dimentions.fsz15,
+                                        ),
                                       ),
-                                    ),
                                     )
                                   ),
                                   Row(

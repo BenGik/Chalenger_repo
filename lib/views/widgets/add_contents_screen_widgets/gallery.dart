@@ -19,7 +19,7 @@ class _GalleryPageState extends State<GalleryPage>
     TabController(length: 3, vsync: this);
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
+        systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Color(0xFF010212),
           statusBarIconBrightness: Brightness.light,
           systemNavigationBarColor: Color(0xFF010212),
@@ -51,7 +51,7 @@ class _GalleryPageState extends State<GalleryPage>
           ),
         ),
         elevation: 1,
-        backgroundColor: const Color(0xFF010212),
+        backgroundColor: Color(0xFF010212),
       ),
       body: TabBarView(
         controller: xController,
@@ -77,7 +77,7 @@ class _ImagesAndVideosViewState extends State<ImagesAndVideosView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
       body: GridView.builder(
         itemCount: 30,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -110,7 +110,7 @@ class _VideosViewState extends State<VideosView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
       body: GridView.builder(
         itemCount: 30,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -143,7 +143,7 @@ class _PicturesViewState extends State<PicturesView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF010212),
+      backgroundColor: Color(0xFF010212),
       body: GridView.builder(
         itemCount: 20,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
