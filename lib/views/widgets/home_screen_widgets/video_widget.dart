@@ -28,7 +28,7 @@ class _VideoWidgetState extends State<VideoWidget> {
   void initState() {
     super.initState();
     controller.mainVideoPlayerController.initialize().then((_) =>
-    controller.mainVideoPlayerController.play());
+    controller.mainVideoPlayerController.pause());
   }
   @override
   Widget build(BuildContext context) {
