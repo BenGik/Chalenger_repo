@@ -15,14 +15,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 
-class MainChallengeScrollPage extends StatefulWidget {
-  const MainChallengeScrollPage({super.key});
+class MainVideosSwipePage extends StatefulWidget {
+  const MainVideosSwipePage({super.key});
 
   @override
-  State<MainChallengeScrollPage> createState() => _MainChallengeScrollPageState();
+  State<MainVideosSwipePage> createState() => _MainVideosSwipePageState();
 }
 
-class _MainChallengeScrollPageState extends State<MainChallengeScrollPage> 
+class _MainVideosSwipePageState extends State<MainVideosSwipePage> 
   with TickerProviderStateMixin{
 
   @override

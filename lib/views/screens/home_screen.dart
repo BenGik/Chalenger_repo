@@ -1,12 +1,13 @@
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/views/screens/add_content_screen.dart';
 import 'package:chalenger/views/screens/friends_screen.dart';
-import 'package:chalenger/views/screens/main_challenge_scroll_page.dart';
+import 'package:chalenger/views/screens/main_videos_swipe_page.dart';
 import 'package:chalenger/views/screens/notifications_screen.dart';
 import 'package:chalenger/views/screens/user_profile_screen.dart';
 import 'package:chalenger/utils/translation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rive/rive.dart';
 
 
@@ -19,9 +20,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+  int notifCount = 8;
 
   final tabs =[
-    const MainChallengeScrollPage(),
+    const MainVideosSwipePage(),
     const FriendsScreen(),
     const AddContentSreen(),
     const NotificationsScreen(),
@@ -39,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFF010212),
       extendBody: true,
+      extendBodyBehindAppBar: true,
       body: tabs[_selectedIndex],
       bottomNavigationBar: Visibility(
         visible: _selectedIndex == 2? false : true,
@@ -71,7 +74,47 @@ class _HomeScreenState extends State<HomeScreen> {
               label: ''
             ),
             BottomNavigationBarItem(
-              icon: const FaIcon(FontAwesomeIcons.bell),
+              icon: Stack(
+                alignment: Alignment.topRight,
+                children: [
+                    const FaIcon(FontAwesomeIcons.bell
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(
+                      notifCount == 0
+                      ? 0
+                      : 2
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      shape: BoxShape.circle
+                    ),
+                    child: notifCount == 0
+                    ? const SizedBox()
+                    : notifCount > 9
+                    ? Text(
+                      "9+",
+                      style: GoogleFonts.mulish(
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800,
+                          fontSize: Dimentions.fsz12,
+                        )
+                      )
+                    )
+                    : Text(
+                      notifCount.toString(),
+                      style: GoogleFonts.mulish(
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w800,
+                          fontSize: Dimentions.fsz12,
+                        )
+                      )
+                    ),
+                  )
+                ]
+              ),
               activeIcon: const FaIcon(FontAwesomeIcons.solidBell),
               label: tr(context)!.notification,
             ),

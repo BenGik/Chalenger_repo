@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:chalenger/utils/dimentions.dart';
+import 'package:chalenger/utils/routes.dart';
 import 'package:chalenger/views/widgets/story_screen_widgets/my_story_page.dart';
 import 'package:chalenger/views/widgets/common_widgets/build_dashed_border.dart';
 import 'package:chalenger/views/widgets/common_widgets/custom_over_scroll_notification.dart';
@@ -45,7 +46,7 @@ class _StoryScreenState extends State<StoryScreen> {
                       children: [
                         SizedBox(height: Dimentions.height10),
                         GestureDetector(
-                          onTap: () => Get.to(() => const MyStoryPage()),
+                          onTap:() => Navigator.push(context, PageRoutes3(child: const MyStoryPage())),
                           child: Row(
                             children: [
                               ProfileCard(
@@ -111,7 +112,7 @@ class _StoryScreenState extends State<StoryScreen> {
                                 vertical: Dimentions.height10
                               ),
                               child: GestureDetector(
-                                onTap: () => Get.to(() => const StoryViewPage()),
+                                onTap:() => Navigator.push(context, PageRoutes3(child: const StoryViewPage())),
                                 child: Row(
                                   children: [
                                     BuildDashedBorder(
@@ -176,7 +177,7 @@ class _StoryScreenState extends State<StoryScreen> {
                                 vertical: Dimentions.height10
                               ),
                               child: GestureDetector(
-                                onTap: () => Get.to(const StoryViewPage()),
+                                onTap:() => Navigator.push(context, PageRoutes3(child: const StoryViewPage())),
                                 child: Row(
                                   children: [
                                     BuildDashedBorder(

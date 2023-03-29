@@ -1,8 +1,8 @@
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/utils/routes.dart';
 import 'package:chalenger/utils/translation.dart';
+import 'package:chalenger/app_theme_management_systheme/app_theme_change_screen.dart';
 import 'package:chalenger/views/screens/creator_profile_screen.dart';
-import 'package:chalenger/views/widgets/home_screen_widgets/logo_animate.dart';
 import 'package:chalenger/views/widgets/home_screen_widgets/writting_comments_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -336,32 +336,48 @@ class _VideoActionsState extends State<VideoActions> {
                     ],
                   ),
                 ),
-                Switch.adaptive(
-                  value: autoScroll,
-                  onChanged: (onChanged) => setState(() {
-                    autoScroll = onChanged;
-                  }),
-                  thumbIcon: MaterialStateProperty.resolveWith<Icon?>((Set<MaterialState> states) {
-                    if (states.contains(MaterialState.selected)) {
-                      return Icon(
-                        FontAwesomeIcons.circleChevronUp,
-                        color: Colors.black,
-                        size: Dimentions.size16,
-                      );
-                    }
-                    return Icon(
-                      FontAwesomeIcons.circleChevronUp,
-                      color: Colors.black,
-                      size: Dimentions.size16,
-                    ); 
-                  }),
-                  activeColor: Colors.amber[300],
-                  inactiveThumbColor: Colors.white.withOpacity(0.8),
-                  activeTrackColor: Colors.amber[200],
-                  inactiveTrackColor: Colors.white.withOpacity(0.6),
+                // Switch.adaptive(
+                //   value: autoScroll,
+                //   onChanged: (onChanged) => setState(() {
+                //     autoScroll = onChanged;
+                //   }),
+                //   thumbIcon: MaterialStateProperty.resolveWith<Icon?>((Set<MaterialState> states) {
+                //     if (states.contains(MaterialState.selected)) {
+                //       return Icon(
+                //         FontAwesomeIcons.circleChevronUp,
+                //         color: Colors.black,
+                //         size: Dimentions.size16,
+                //       );
+                //     }
+                //     return Icon(
+                //       FontAwesomeIcons.circleChevronUp,
+                //       color: Colors.black,
+                //       size: Dimentions.size16,
+                //     ); 
+                //   }),
+                //   activeColor: Colors.amber[300],
+                //   inactiveThumbColor: Colors.white.withOpacity(0.8),
+                //   activeTrackColor: Colors.amber[200],
+                //   inactiveTrackColor: Colors.white.withOpacity(0.6),
+                // ),
+                GestureDetector(
+                  onTap:() => Navigator.push(context, PageRoutes3(child: const AppThemeChangeScreen())),
+                  child: Container(
+                    padding: EdgeInsets.only(
+                      bottom: Dimentions.height20,
+                    ),
+                    child: Column(
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.palette,
+                          color: Colors.white.withOpacity(0.9),
+                          size: Dimentions.size30
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                SizedBox(height: Dimentions.height10),
-                const LogoAnimate()
+                // const LogoAnimate()
               ],
             )
           )

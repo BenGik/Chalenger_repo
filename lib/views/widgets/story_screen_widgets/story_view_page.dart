@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/views/widgets/common_widgets/custom_over_scroll_notification.dart';
 import 'package:chalenger/views/widgets/common_widgets/ripple_effect.dart';
@@ -321,7 +320,7 @@ class _StoryViewPageState extends State<StoryViewPage>
                       ),
                     )
                   ),
-                ),
+                )
               ),
             ],
           ),

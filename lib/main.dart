@@ -1,4 +1,5 @@
 import 'package:camera/camera.dart';
+import 'package:chalenger/app_theme_management_systheme/app_theme_change_screen.dart';
 import 'package:chalenger/utils/init_dependencies.dart';
 import 'package:chalenger/views/screens/add_content_screen.dart';
 import 'package:chalenger/views/screens/home_screen.dart';
@@ -51,7 +52,7 @@ class App extends StatelessWidget {
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent
       ),
-      home: const HomeScreen()
+      home: const AppThemeChangeScreen()
     );
   }
 }

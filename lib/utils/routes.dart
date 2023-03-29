@@ -76,7 +76,7 @@ class PageRoutes3 extends PageRouteBuilder {
     required this.child,
     this.direction = AxisDirection.up
   }):super(
-    transitionDuration: const Duration(milliseconds: 800),
+    transitionDuration: const Duration(milliseconds: 300),
     pageBuilder: (context, animation, secondaryAnimation) => child
   );
 
