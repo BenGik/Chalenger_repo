@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:chalenger/models/data_model.dart';
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/views/widgets/common_widgets/custom_over_scroll_notification.dart';
 import 'package:chalenger/views/widgets/common_widgets/ripple_effect.dart';
@@ -134,7 +135,7 @@ class _StoryViewPageState extends State<StoryViewPage>
               width: double.infinity,
               child: Center(
                 child: Image.asset(
-                  media[imageid]["image"].toString(),
+                  DataModel.items[1]["stories"][0]["asset"],
                   fit: BoxFit.fitWidth,
                 ),
               ),
@@ -458,5 +459,4 @@ class _StoryViewPageState extends State<StoryViewPage>
       child: storyPageEntity(context),
     );
   }
-
 }

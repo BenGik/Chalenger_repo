@@ -1,7 +1,6 @@
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/utils/translation.dart';
 import 'package:chalenger/views/widgets/common_widgets/custom_over_scroll_notification.dart';
-import 'package:chalenger/views/widgets/common_widgets/custom_slide_transition.dart';
 import 'package:chalenger/views/widgets/profiles_widgets/creator_items.dart';
 import 'package:chalenger/views/widgets/common_widgets/profile_card.dart';
 import 'package:chalenger/views/widgets/profiles_widgets/profile_label_count.dart';
