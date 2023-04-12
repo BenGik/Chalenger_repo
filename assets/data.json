@@ -1,7 +1,7 @@
 {
-    "items": [
+    "data": [
         {
-            "profil": {
+            "profile": {
                 "username": "Ebenezer",
                 "nickname": "Bengeek",
                 "profileimage": "assets/images/i_1.jpg"
@@ -10,39 +10,39 @@
                 {
                     "video": "assets/videos/v_1.mp4",
                     "description": "Une petite balade dans notre époustouflante et verdouante nature de nos pères et nous biensûr",
-                    "views": "10000",
-                    "likes": "1200",
-                    "comments": "824",
-                    "share": "29"
+                    "views": 10000,
+                    "likes": 1200,
+                    "comments": 824,
+                    "share": 29
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_2.jpg",
                     "description": "Cool hein!!!",
-                    "views": "18",
-                    "likes": "4",
-                    "comments": "2",
-                    "share": "1"
+                    "views": 18,
+                    "likes": 4,
+                    "comments": 2,
+                    "share": 1
                 },
                 {
                     "asset": "assets/images/i_8.jpg",
                     "description": "Assez idiot oû bien??",
-                    "views": "42",
-                    "likes": "15",
-                    "comments": "10",
-                    "share": "0"
+                    "views": 42,
+                    "likes": 15,
+                    "comments": 10,
+                    "share": 0
                 }
             ],
             "stats": {
-                "following": "12",
-                "subscribers": "5230",
-                "total_likes": "1255000",
-                "total_publications": "45"
+                "following": 12,
+                "subscribers": 5230,
+                "total_likes": 1255000,
+                "total_publications": 45
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Olivia",
                 "nickname": "Oli",
                 "profileimage": "assets/images/i_2.jpg"
@@ -51,47 +51,47 @@
                 {
                     "video": "assets/videos/v_2.mp4",
                     "description": "Une chanteuse que j'adore super bien!!!",
-                    "views": "100140",
-                    "likes": "15000",
-                    "comments": "8124",
-                    "share": "125"
+                    "views": 100140,
+                    "likes": 15000,
+                    "comments": 8124,
+                    "share": 125
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_9.jpg",
                     "description": "Bah mignon sans doute!",
-                    "views": "13",
-                    "likes": "10",
-                    "comments": "8",
-                    "share": "6"
+                    "views": 13,
+                    "likes": 10,
+                    "comments": 8,
+                    "share": 6
                 },
                 {
                     "asset": "assets/images/i_1.jpg",
                     "description": "Bon sans mentir quel est ton point de vu toi??",
-                    "views": "126",
-                    "likes": "24",
-                    "comments": "21",
-                    "share": "12"
+                    "views": 126,
+                    "likes": 24,
+                    "comments": 21,
+                    "share": 12
                 },
                 {
                     "asset": "assets/images/i_3.jpg",
                     "description": "Ouais Ouais",
-                    "views": "6",
-                    "likes": "2",
-                    "comments": "1",
-                    "share": "0"
+                    "views": 6,
+                    "likes": 2,
+                    "comments": 1,
+                    "share": 0
                 }
             ],
             "stats": {
-                "following": "40",
-                "subscribers": "6830",
-                "total_likes": "1252500",
-                "total_publications": "72"
+                "following": 40,
+                "subscribers": 6830,
+                "total_likes": 1252500,
+                "total_publications": 72
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Caleb",
                 "nickname": "Lyc",
                 "profileimage": "assets/images/i_3.jpg"
@@ -100,39 +100,39 @@
                 {
                     "video": "assets/videos/v_3.mp4",
                     "description": "Voilâ un qui connaît l'amour",
-                    "views": "182100",
-                    "likes": "1520",
-                    "comments": "710",
-                    "share": "100"
+                    "views": 182100,
+                    "likes": 1520,
+                    "comments": 710,
+                    "share": 100
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_7.jpg",
                     "description": "Main non!!!",
-                    "views": "41",
-                    "likes": "10",
-                    "comments": "4",
-                    "share": "0"
+                    "views": 41,
+                    "likes": 10,
+                    "comments": 4,
+                    "share": 0
                 },
                 {
                     "asset": "assets/images/i_4.jpg",
                     "description": "Wep that's it",
-                    "views": "16",
-                    "likes": "2",
-                    "comments": "0",
-                    "share": "1"
+                    "views": 16,
+                    "likes": 2,
+                    "comments": 0,
+                    "share": 1
                 }
             ],
             "stats": {
-                "following": "23",
-                "subscribers": "4230",
-                "total_likes": "1432000",
-                "total_publications": "69"
+                "following": 23,
+                "subscribers": 4230,
+                "total_likes": 1432000,
+                "total_publications": 69
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Jean",
                 "nickname": "Godofjs",
                 "profileimage": "assets/images/i_4.jpg"
@@ -141,55 +141,55 @@
                 {
                     "video": "assets/videos/v_4.mp4",
                     "description": "Une bonne bat pour commencer la semaine",
-                    "views": "14022",
-                    "likes": "1345",
-                    "comments": "231",
-                    "share": "10"
+                    "views": 14022,
+                    "likes": 1345,
+                    "comments": 231,
+                    "share": 10
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_1.jpg",
                     "description": "Lalalala",
-                    "views": "1000",
-                    "likes": "125",
-                    "comments": "81",
-                    "share": "32"
+                    "views": 1000,
+                    "likes": 125,
+                    "comments": 81,
+                    "share": 32
                 },
                 {
                     "asset": "assets/images/i_5.jpg",
                     "description": "Un commentaire?",
-                    "views": "100",
-                    "likes": "14",
-                    "comments": "16",
-                    "share": "5"
+                    "views": 100,
+                    "likes": 14,
+                    "comments": 16,
+                    "share": 5
                 },
                 {
                     "asset": "assets/images/i_3.jpg",
                     "description": "Quoi dire de plus?",
-                    "views": "10000",
-                    "likes": "1200",
-                    "comments": "824",
-                    "share": "29"
+                    "views": 10000,
+                    "likes": 1200,
+                    "comments": 824,
+                    "share": 29
                 },
                 {
                     "asset": "assets/images/i_2.jpg",
                     "description": "Que du bien hein!!!",
-                    "views": "8",
-                    "likes": "1",
-                    "comments": "0",
-                    "share": "0"
+                    "views": 8,
+                    "likes": 1,
+                    "comments": 0,
+                    "share": 0
                 }
             ],
             "stats": {
-                "following": "10",
-                "subscribers": "163250",
-                "total_likes": "6514230",
-                "total_publications": "125"
+                "following": 10,
+                "subscribers": 163250,
+                "total_likes": 6514230,
+                "total_publications": 125
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Parfait",
                 "nickname": "Docparfait",
                 "profileimage": "assets/images/i_5.jpg"
@@ -198,31 +198,31 @@
                 {
                     "video": "assets/videos/v_5.mp4",
                     "description": "Qui sait chanter chante, qui sait applaudir applaudit et qui peut s'émerveiller s'émerveille",
-                    "views": "50012000",
-                    "likes": "2560410",
-                    "comments": "70250",
-                    "share": "12036"
+                    "views": 50012000,
+                    "likes": 2560410,
+                    "comments": 70250,
+                    "share": 12036
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_6.jpg",
                     "description": "Une petite balade dans notre époustouflante et verdouante nature de nos pères et nous biensûr",
-                    "views": "10100",
-                    "likes": "1300",
-                    "comments": "924",
-                    "share": "52"
+                    "views": 10100,
+                    "likes": 1300,
+                    "comments": 924,
+                    "share": 52
                 }
             ],
             "stats": {
-                "following": "21",
-                "subscribers": "452100",
-                "total_likes": "12556200",
-                "total_publications": "124"
+                "following": 21,
+                "subscribers": 452100,
+                "total_likes": 12556200,
+                "total_publications": 124
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Philip",
                 "nickname": "Ezy",
                 "profileimage": "assets/images/i_6.jpg"
@@ -231,71 +231,71 @@
                 {
                     "video": "assets/videos/v_6.mp4",
                     "description": "Même elle continue??",
-                    "views": "15000",
-                    "likes": "1120",
-                    "comments": "902",
-                    "share": "58"
+                    "views": 15000,
+                    "likes": 1120,
+                    "comments": 902,
+                    "share": 58
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_3.jpg",
                     "description": "Un petit ...",
-                    "views": "10000",
-                    "likes": "100",
-                    "comments": "19",
-                    "share": "2"
+                    "views": 10000,
+                    "likes": 100,
+                    "comments": 19,
+                    "share": 2
                 },
                 {
                     "asset": "assets/images/i_1.jpg",
                     "description": "Cc les gars",
-                    "views": "10",
-                    "likes": "0",
-                    "comments": "1",
-                    "share": "0"
+                    "views": 10,
+                    "likes": 0,
+                    "comments": 1,
+                    "share": 0
                 },
                 {
                     "asset": "assets/images/i_4.jpg",
                     "description": "Ouff ouff",
-                    "views": "152",
-                    "likes": "12",
-                    "comments": "0",
-                    "share": "0"
+                    "views": 152,
+                    "likes": 12,
+                    "comments": 0,
+                    "share": 0
                 },
                 {
                     "asset": "assets/images/i_10.jpg",
                     "description": "What??",
-                    "views": "140",
-                    "likes": "12",
-                    "comments": "1",
-                    "share": "21"
+                    "views": 140,
+                    "likes": 12,
+                    "comments": 1,
+                    "share": 21
                 },
                 {
                     "asset": "assets/images/i_8.jpg",
                     "description": "...",
-                    "views": "158",
-                    "likes": "7",
-                    "comments": "5",
-                    "share": "3"
+                    "views": 158,
+                    "likes": 7,
+                    "comments": 5,
+                    "share": 3
                 },
                 {
                     "asset": "assets/images/i_6.jpg",
                     "description": "Passes seulement bro!",
-                    "views": "452",
-                    "likes": "81",
-                    "comments": "35",
-                    "share": "10"
+                    "views": 452,
+                    "likes": 81,
+                    "comments": 35,
+                    "share": 10
                 }
             ],
             "stats": {
-                "following": "72",
-                "subscribers": "6430",
-                "total_likes": "632000",
-                "total_publications": "79"
+                "following": 72,
+                "subscribers": 6430,
+                "total_likes": 632000,
+                "total_publications": 79
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Nice",
                 "nickname": "Legik",
                 "profileimage": "assets/images/i_7.jpg"
@@ -304,31 +304,31 @@
                 {
                     "video": "assets/videos/v_7.mp4",
                     "description": "Wep pour t'avoir elle peuvent tout je t'assure",
-                    "views": "12000",
-                    "likes": "1200",
-                    "comments": "781",
-                    "share": "63"
+                    "views": 12000,
+                    "likes": 1200,
+                    "comments": 781,
+                    "share": 63
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_5.jpg",
                     "description": "Regardes juste",
-                    "views": "120",
-                    "likes": "24",
-                    "comments": "13",
-                    "share": "2"
+                    "views": 120,
+                    "likes": 24,
+                    "comments": 13,
+                    "share": 2
                 }
             ],
             "stats": {
-                "following": "12",
-                "subscribers": "1630",
-                "total_likes": "15000",
-                "total_publications": "7"
+                "following": 12,
+                "subscribers": 1630,
+                "total_likes": 15000,
+                "total_publications": 7
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Magloire",
                 "nickname": "Coachmag",
                 "profileimage": "assets/images/i_8.jpg"
@@ -337,47 +337,47 @@
                 {
                     "video": "assets/videos/v_8.mp4",
                     "description": "Let's praise God a little bit",
-                    "views": "1000",
-                    "likes": "46",
-                    "comments": "27",
-                    "share": "29"
+                    "views": 1000,
+                    "likes": 46,
+                    "comments": 27,
+                    "share": 29
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_2.jpg",
                     "description": "Qui pour dire un mot?",
-                    "views": "179",
-                    "likes": "13",
-                    "comments": "8",
-                    "share": "3"
+                    "views": 179,
+                    "likes": 13,
+                    "comments": 8,
+                    "share": 3
                 },
                 {
                     "asset": "assets/images/i_9.jpg",
                     "description": "Ah oui!!!",
-                    "views": "79",
-                    "likes": "21",
-                    "comments": "0",
-                    "share": "1"
+                    "views": 79,
+                    "likes": 21,
+                    "comments": 0,
+                    "share": 1
                 },
                 {
                     "asset": "assets/images/i_7.jpg",
                     "description": "!",
-                    "views": "79",
-                    "likes": "17",
-                    "comments": "18",
-                    "share": "20"
+                    "views": 79,
+                    "likes": 17,
+                    "comments": 18,
+                    "share": 20
                 }
             ],
             "stats": {
-                "following": "12",
-                "subscribers": "530",
-                "total_likes": "12550",
-                "total_publications": "57"
+                "following": 12,
+                "subscribers": 530,
+                "total_likes": 12550,
+                "total_publications": 57
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Grâce",
                 "nickname": "Gracy",
                 "profileimage": "assets/images/i_9.jpg"
@@ -386,39 +386,39 @@
                 {
                     "video": "assets/videos/v_9.mp4",
                     "description": "For God only I will live",
-                    "views": "11100",
-                    "likes": "120",
-                    "comments": "84",
-                    "share": "19"
+                    "views": 11100,
+                    "likes": 120,
+                    "comments": 84,
+                    "share": 19
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_7.jpg",
                     "description": "Ouff!",
-                    "views": "100",
-                    "likes": "10",
-                    "comments": "24",
-                    "share": "2"
+                    "views": 100,
+                    "likes": 10,
+                    "comments": 24,
+                    "share": 2
                 },
                 {
                     "asset": "assets/images/i_3.jpg",
                     "description": "Que de bon!!!",
-                    "views": "100",
-                    "likes": "12",
-                    "comments": "4",
-                    "share": "0"
+                    "views": 100,
+                    "likes": 12,
+                    "comments": 4,
+                    "share": 0
                 }
             ],
             "stats": {
-                "following": "12",
-                "subscribers": "351",
-                "total_likes": "12000",
-                "total_publications": "15"
+                "following": 12,
+                "subscribers": 351,
+                "total_likes": 12000,
+                "total_publications": 15
             }
         },
         {
-            "profil": {
+            "profile": {
                 "username": "Prince",
                 "nickname": "Princemo",
                 "profileimage": "assets/images/i_10.jpg"
@@ -427,35 +427,35 @@
                 {
                     "video": "assets/videos/v_10.mp4",
                     "description": "Et si on laissait les enfant revigorer ce monde si vieillissante et mourante?",
-                    "views": "10000",
-                    "likes": "120",
-                    "comments": "24",
-                    "share": "29"
+                    "views": 10000,
+                    "likes": 120,
+                    "comments": 24,
+                    "share": 29
                 }
             ],
             "stories": [
                 {
                     "asset": "assets/images/i_2.jpg",
                     "description": "Il y a quoi?",
-                    "views": "10",
-                    "likes": "0",
-                    "comments": "0",
-                    "share": "2"
+                    "views": 10,
+                    "likes": 0,
+                    "comments": 0,
+                    "share": 2
                 },
                 {
                     "asset": "assets/images/i_8.jpg",
                     "description": "Bonne soirée les bros",
-                    "views": "120",
-                    "likes": "18",
-                    "comments": "45",
-                    "share": "29"
+                    "views": 120,
+                    "likes": 18,
+                    "comments": 45,
+                    "share": 29
                 }
             ],
             "stats": {
-                "following": "26",
-                "subscribers": "520",
-                "total_likes": "25030",
-                "total_publications": "50"
+                "following": 26,
+                "subscribers": 520,
+                "total_likes": 25030,
+                "total_publications": 50
             }
         }
     ]

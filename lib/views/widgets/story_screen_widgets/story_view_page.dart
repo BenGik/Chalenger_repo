@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:chalenger/models/data_model.dart';
+import 'package:chalenger/controllers/data_model_controller.dart';
 import 'package:chalenger/utils/dimentions.dart';
 import 'package:chalenger/views/widgets/common_widgets/custom_over_scroll_notification.dart';
 import 'package:chalenger/views/widgets/common_widgets/ripple_effect.dart';
@@ -98,6 +98,8 @@ class _StoryViewPageState extends State<StoryViewPage>
 
   @override
   Widget build(BuildContext context) {
+    UserDataController dataController = Get.find();
+    print(dataController.userData?.data.length);
     return Scaffold(
       backgroundColor: Color(0xFF010212),
       extendBodyBehindAppBar: true,
@@ -135,7 +137,7 @@ class _StoryViewPageState extends State<StoryViewPage>
               width: double.infinity,
               child: Center(
                 child: Image.asset(
-                  DataModel.items[1]["stories"][0]["asset"],
+                  media[imageid]["image"],
                   fit: BoxFit.fitWidth,
                 ),
               ),

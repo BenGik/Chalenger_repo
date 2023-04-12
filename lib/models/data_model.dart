@@ -1,15 +1,24 @@
 import 'dart:convert';
+import 'package:chalenger/models/global_user_data_model.dart';
 
 
-import 'package:flutter/services.dart';
+UserData userDataFromJson(String str) =>
+  UserData.fromJson(json.decode(str));
 
-class DataModel {
-  static List items = [];
+String userDataToJson(UserData data) => json.encode(data.toJson());
 
-  Future <void> extractJson() async {
-    final String response = await rootBundle.loadString('assets/data.json');
-    final data = jsonDecode(response);
+class UserData {
+  UserData ({
+    required this.data
+  });
 
-    items = data["items"];
-  }
+  List<GlobalUserData> data;
+
+  factory UserData.fromJson(Map<String, dynamic> json) => UserData(
+    data: List<GlobalUserData>.from(json["data"].map((x) => UserData.fromJson(x))),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "data": List<dynamic>.from(data.map((x) => x.toJson())),
+  };
 }

@@ -1,3 +1,4 @@
+import 'package:chalenger/controllers/data_model_controller.dart';
 import 'package:chalenger/controllers/emoji_keboard_controller.dart';
 import 'package:chalenger/controllers/video_controllers.dart';
 import 'package:chalenger/views/widgets/home_screen_widgets/video_screen.dart';
@@ -10,6 +11,7 @@ class InitDep extends Bindings {
     Get.put(MainVideoController(video: item[1]["video"].toString()));
     Get.put(OnProfileVideoController(video: "assets/videos/v_1.mp4"));
     Get.put(EmojiKeyboardController());
+    Get.put(UserDataController());
   }
 
 }
